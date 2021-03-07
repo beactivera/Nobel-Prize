@@ -1,4 +1,7 @@
 import requests
+import schedule
+import time
+
 
 URL = 'http://api.nobelprize.org/v1/laureate.json'
 
@@ -49,4 +52,9 @@ def zadanie():
     print(f"Lista osób/organizacji, które otrzymały więcej niż jedną nagrodę:\n {prize_more_than_one}\n")
 
 
-zadanie()
+# d) ustaw harmonogram uruchomienia programu: co piątek o 14.51 w opraciu o najnowsza wersje pliku z linku.
+schedule.every().friday.at("14:51").do(zadanie)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
