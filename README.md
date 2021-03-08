@@ -12,10 +12,13 @@ Project is created with:
 # clone the repo
 $ git clone https://github.com/beactivera/Nobel-Prize.git 
 
-# change the working directory to sherlock
+# change the working directory to Nobel-Prize
 $ cd Nobel-Prize
 
 #install the requirements
-$python3 -m pip install -r requirements.txt
+$python -m pip install -r requirements.txt
+
+#run program
+$python main.py
 ```
 
